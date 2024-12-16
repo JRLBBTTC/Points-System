@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points Tracking System Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #4CAF50;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Points Tracking System Tutorial</h1>
+    </header>
+    <div class="container">
+        <h2>1. Define Your Requirements</h2>
+        <p>Start by identifying the core features of your app:</p>
+        <ul>
+            <li><strong>User Management:</strong> Create member and admin accounts.</li>
+            <li><strong>Point Tracking:</strong> Record points for activities like attendance or participation.</li>
+            <li><strong>Redemption System:</strong> Allow points to be redeemed for events or prizes.</li>
+            <li><strong>Activity Log:</strong> Show history of points earned and spent.</li>
+            <li><strong>Notifications:</strong> Notify members of changes in points.</li>
+        </ul>
+
+        <h2>2. Free Tech Stack</h2>
+        <h3>Frontend</h3>
+        <ul>
+            <li><strong>Web App:</strong> Use <a href="https://reactjs.org/">React.js</a> or <a href="https://vuejs.org/">Vue.js</a>.</li>
+            <li><strong>Mobile App:</strong> Use <a href="https://reactnative.dev/">React Native</a> or <a href="https://flutter.dev/">Flutter</a>.</li>
+        </ul>
+        <h3>Backend</h3>
+        <ul>
+            <li><a href="https://nodejs.org/">Node.js</a> with <a href="https://expressjs.com/">Express.js</a></li>
+            <li><a href="https://www.djangoproject.com/">Django</a> (Python)</li>
+        </ul>
+        <h3>Database</h3>
+        <ul>
+            <li><a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a> (Free Tier)</li>
+            <li><a href="https://firebase.google.com/products/firestore">Firebase Firestore</a> (Free Tier)</li>
+        </ul>
+
+        <h2>3. Step-by-Step Development</h2>
+        <h3>Frontend Setup</h3>
+        <pre><code>// React setup
+npx create-react-app points-tracking
+cd points-tracking
+npm start</code></pre>
+
+        <h3>Backend Setup</h3>
+        <pre><code>// Node.js and Express setup
+npm init -y
+npm install express body-parser cors mongoose
+
+// Basic server
+const express = require("express");
+const app = express();
+app.use(express.json());
+
+app.get("/", (req, res) => {
+    res.send("Points Tracking API is running!");
+});
+
+app.listen(5000, () => {
+    console.log("Server started on port 5000");
+});</code></pre>
+
+        <h3>Database Setup</h3>
+        <p>Use MongoDB Atlas for a free cloud database:</p>
+        <pre><code>// MongoDB Connection
+const mongoose = require("mongoose");
+mongoose.connect("your_connection_string", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});</code></pre>
+
+        <h2>4. Free Deployment Options</h2>
+        <ul>
+            <li><a href="https://www.netlify.com/">Netlify</a>: Free for frontend web apps.</li>
+            <li><a href="https://vercel.com/">Vercel</a>: Ideal for React or Next.js projects.</li>
+            <li><a href="https://render.com/">Render</a>: Free backend hosting.</li>
+            <li><a href="https://www.heroku.com/">Heroku</a>: Free backend hosting for small apps.</li>
+        </ul>
+
+        <h2>5. Expand and Improve</h2>
+        <p>Enhance your app over time by adding features like:</p>
+        <ul>
+            <li>Leaderboards for competitive motivation.</li>
+            <li>Badges or achievements for milestones.</li>
+            <li>Monthly point summaries.</li>
+        </ul>
+
+        <p>For additional help, refer to the official documentation of the tools and frameworks mentioned here!</p>
+        <h3>6. Hosting Your Website</h3>
+        <p>To access this tutorial as a live website, upload this HTML file to a free hosting service:</p>
+        <ul>
+            <li><a href="https://pages.github.com/">GitHub Pages</a>: Free hosting for static sites.</li>
+            <li><a href="https://www.netlify.com/">Netlify</a>: Easy setup with custom domains.</li>
+            <li><a href="https://vercel.com/">Vercel</a>: Quick deployment for web projects.</li>
+        </ul>
+        <p>Follow the instructions on their respective websites to upload your file and get a link to share.</p>
+    </div>
+</body>
+</html>
